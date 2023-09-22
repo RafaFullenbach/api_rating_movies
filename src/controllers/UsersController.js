@@ -20,10 +20,7 @@ class UsersController {
     async update(request, response) {
         const { name, email, password, old_password } = request.body;
         const { id } = request.params;
-        // const database = await sqliteConnection();
-        // const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
         const [user] = await knex("users").where("id", id);
-        // const userWithUpdatedEmail = await database.get("SELECT * FROM users WHERE email = (?)", [email]);
         const [userWithUpdatedEmail] = await knex("users").where("email", email);
 
         if (!user) {
@@ -51,7 +48,7 @@ class UsersController {
         user.name = name ?? user.name;
         user.email = email ?? user.email;
 
-        await knex("users").update({name, email, password: user.password, updated_at: knex.fn.now()}).where("id", id);
+        await knex("users").update({ name: user.name, email: user.email, password: user.password, updated_at: knex.fn.now() }).where("id", id);
 
         return response.json();
     }
