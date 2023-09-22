@@ -4,6 +4,7 @@ const MovieNotesController = require("../controllers/MovieNotesController");
 const movieNotesRoutes = Router();
 const movieNotesController = new MovieNotesController();
 
+movieNotesRoutes.get("/:id", movieNotesController.show);
 movieNotesRoutes.post("/:user_id", movieNotesController.create);
 
 module.exports = movieNotesRoutes;
