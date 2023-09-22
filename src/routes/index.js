@@ -5,6 +5,6 @@ const movieNotesRouter = require("./movie_notes.routes");
 const routes = Router();
 
 routes.use("/users", usersRouter);
-router.use("/movie_notes", movieNotesRouter);
+routes.use("/movie_notes", movieNotesRouter);
 
 module.exports = routes;
