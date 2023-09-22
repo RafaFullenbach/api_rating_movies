@@ -10,7 +10,7 @@ class MovieNotesController {
             throw new AppError("A nota do filme deve ser de 1 a 5");
         }
 
-        const [movie_note_id] = await knex("movie_notes").inser({
+        const [note_id] = await knex("movie_notes").insert({
             title,
             description,
             rating,
@@ -19,13 +19,15 @@ class MovieNotesController {
 
         const movieTagsInsert = tags.map(name => {
             return {
-                movie_note_id,
+                note_id,
                 user_id,
                 name
             }
         });
 
-        await knex("tags").insert(movieTagsInsert);
+        await knex("movie_tags").insert(movieTagsInsert);
+
+        response.json();
     }
 }
 
