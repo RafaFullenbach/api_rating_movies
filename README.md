@@ -150,3 +150,6 @@ Now just start the API :
 
 
 ## API demo
+
+https://github.com/RafaFullenbach/rating_movies/assets/63618616/a4c57aaa-0681-40cf-a806-31f1dbc4cfae
+
