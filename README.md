@@ -1,4 +1,4 @@
-# Rating Movies
+# API Rating Movies
 
 The goal of the project is to learn about Nodejs And SQL.
 ## Apprenticeship
