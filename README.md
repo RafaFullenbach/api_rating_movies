@@ -1,4 +1,4 @@
-# Rating Movies
+# API Rating Movies
 
 The goal of the project is to learn about Nodejs And SQL.
 ## Apprenticeship
@@ -150,3 +150,8 @@ Now just start the API :
 
 
 ## API demo
+
+https://github.com/RafaFullenbach/rating_movies/assets/63618616/b272cf18-edb6-4382-99d9-e4457ff3ecea
+
+
+
